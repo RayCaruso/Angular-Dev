@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="Mod1">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <title>Module 1 Solution</title>
+  </head>
+  <body>
+    <div ng-controller="Mod1Controller">
+      <h3>Enter Items separated by , (empty items are ignored):</h3>
+      <input type="text" ng-model="items" >
+      <button ng-click="checkItems()">Check If Too Much</button>
+      <h3>{{message}}</h3>
+    </div>
+  </body>
+</html>
