@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='Module2'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style> body { font-size: 1.2em; }</style>
+    <title>Custom Service</title>
+  </head>
+
+  <body>
+
+
+    <div ng-controller='ShoppingListBuyController as buyer'>
+      <div ng-show="buyer.buyListEmpty()"><h3>Everything is bought<h3></div>
+      <div ng-show="!buyer.buyListEmpty()"><h3>To Buy</h3></div>
+      <ol>
+        <li ng-repeat="item in buyer.buyList">
+          Buy {{ item.quantity }} {{ item.name }}
+         <button ng-click="buyer.buyItem($index);">Bought</button>
+        </li>
+
+      </ol>
+    </div>
+
+
+    <div ng-controller='ShoppingListBoughtController as bought'>
+      <div ng-show="bought.boughtListEmpty()"><h3>Nothing bought yet</h3></div>
+      <div ng-show="!bought.boughtListEmpty()"><h3>Already Bought</h3></div>
+      <ol>
+        <li ng-repeat="item in bought.boughtList">
+          Bought {{ item.quantity }} {{ item.name }}
+        </li>
+
+      </ol>
+    </div>
+
+
+
+
+  </body>
+</html>
