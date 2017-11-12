@@ -55,6 +55,7 @@
     controller.searchItems = function () {
 
       controller.foundItems = [];
+      foundItems = [];
 
       if ( controller.searchTerm === undefined || controller.searchTerm.length == 0 ) {
         return;
